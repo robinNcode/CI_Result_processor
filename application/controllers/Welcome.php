@@ -18,6 +18,7 @@ class Welcome extends CI_Controller {
     	];
 
     	$this->form_validation->set_rules('name_id', 'Name', 'trim|required|text');
+        $this->form_validation->set_rules('var_id', 'ID', 'trim|required|text');
     	$this->form_validation->set_rules('program_id','Program', 'trim|required|numeric');
     	$this->form_validation->set_rules('phone_id','Phone Number', 'trim|required|numeric');
     	$this->form_validation->set_rules('email_id','Email ID', 'trim|required|alpha_numeric');
@@ -25,5 +26,8 @@ class Welcome extends CI_Controller {
     	$this->form_validation->set_rules('semester_id','Semester', 'trim|required|numeric');
 
     	$this->load->view('cgpa',$data);
+
     }
+    
+    
 }
